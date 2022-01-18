@@ -1,0 +1,52 @@
+@use "../../styles/partials/mixins";
+@use "../../styles/partials/global" as *;
+@use "../../styles/partials/variables" as *;
+
+.header {
+  background: linear-gradient(
+    90deg,
+    rgb(110, 94, 254) 0%,
+    rgba(73, 63, 252, 1) 100%
+  );
+  @include mixins.flex-row-center;
+  height: 5rem;
+  font-size: 1.2rem;
+  &__title {
+    color: #fff;
+    justify-self: start;
+    margin-left: 1.25rem;
+    cursor: pointer;
+  }
+  &__logo {
+    margin-left: 0.5rem;
+    font-size: 1.6rem;
+  }
+  &__menu {
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    grid-gap: 10px;
+    text-align: center;
+    width: 70vw;
+    justify-content: end;
+    margin-right: 2rem;
+  }
+  &__links {
+    color: #fff;
+    padding: 0.5rem 1rem;
+  }
+  &__links:hover {
+    background-color: #6d76f7;
+    border-radius: 4px;
+    transition: all 0.2s ease-out;
+  }
+  &__icons {
+    color: #fff;
+  }
+  &__links-mobile {
+    display: none;
+  }
+}
+
+.nav-icon {
+  display: none;
+}
