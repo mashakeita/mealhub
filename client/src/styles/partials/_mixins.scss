@@ -134,6 +134,12 @@
 }
 
 /* Responsive mixins */
+@mixin mobile-only {
+  @media (max-width: 769px) {
+    @content;
+  }
+}
+
 @mixin mobile {
   @media (min-width: $mobile-breakpoint) {
     @content;

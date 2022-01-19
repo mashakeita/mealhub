@@ -3,50 +3,143 @@
 @use "../../styles/partials/variables" as *;
 
 .header {
-  background: linear-gradient(
-    90deg,
-    rgb(110, 94, 254) 0%,
-    rgba(73, 63, 252, 1) 100%
-  );
+  background: linear-gradient(90deg, rgb(28, 27, 27) 0%, rgb(26, 23, 23) 100%);
   @include mixins.flex-row-center;
-  height: 5rem;
+  height: 80px;
   font-size: 1.2rem;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  @include mixins.mobile-only {
+    position: relative;
+  }
+
+  &__container {
+    @include mixins.flex-row-center;
+    height: 80px;
+    max-width: 1500px;
+  }
+
   &__title {
     color: #fff;
     justify-self: start;
-    margin-left: 1.25rem;
+    margin-left: 20px;
     cursor: pointer;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    @include mixins.mobile-only {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translate(25%, 50%);
+    }
   }
   &__logo {
     margin-left: 0.5rem;
-    font-size: 1.6rem;
+    font-size: 1.8rem;
   }
+
   &__menu {
     display: grid;
-    grid-template-columns: repeat(5, auto);
+    grid-template-columns: repeat(4, auto);
     grid-gap: 10px;
     text-align: center;
-    width: 70vw;
+    width: 60vw;
     justify-content: end;
     margin-right: 2rem;
+    @include mixins.mobile-only {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: 90vh;
+      position: absolute;
+      top: 80px;
+      left: -100%;
+      opacity: 1;
+      transition: all 0.5s ease;
+    }
+  }
+  &__menu-active {
+    @include mixins.mobile-only {
+      background: #242222;
+      left: 0;
+      opacity: 1;
+      transition: all 0.5s ease;
+      z-index: 1;
+    }
+  }
+  &__item {
+    height: 80px;
   }
   &__links {
     color: #fff;
+    display: flex;
+    align-items: center;
     padding: 0.5rem 1rem;
+    height: 100%;
+    @include mixins.mobile-only {
+      text-align: center;
+      padding: 2rem;
+      width: 100%;
+      display: table;
+    }
   }
   &__links:hover {
-    background-color: #6d76f7;
-    border-radius: 4px;
+    border-bottom: 4px solid #fff;
     transition: all 0.2s ease-out;
+    @include mixins.mobile-only {
+      background-color: #fff;
+      color: #242424;
+      border-radius: 0;
+    }
+
+    &__links-mobile {
+      display: none;
+      @include mixins.mobile-only {
+        display: block;
+        text-align: center;
+        margin: 2rem auto;
+        border-radius: 4px;
+        width: 80%;
+        text-decoration: none;
+        font-size: 1.5rem;
+        background-color: transparent;
+        color: #fff;
+        padding: 14px 20px;
+        border: 1px solid #fff;
+        transition: all 0.3s ease-out;
+      }
+    }
+    &__links-mobile:hover {
+      @include mixins.mobile-only {
+        background: #fff;
+        color: #242424;
+        transition: 250ms;
+      }
+    }
   }
   &__icons {
     color: #fff;
+    @include mixins.mobile-only {
+      color: #fff;
+      font-size: 2rem;
+    }
   }
   &__links-mobile {
     display: none;
   }
 }
 
-.nav-icon {
+.menu-icon {
   display: none;
+  @include mixins.mobile-only {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(-100%, 60%);
+    font-size: 1.8rem;
+    cursor: pointer;
+  }
 }
