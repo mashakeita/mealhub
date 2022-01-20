@@ -6,7 +6,13 @@ const Format = ["btn--primary", "btn--outline"];
 
 const Sizes = ["btn--medium", "btn--large"];
 
-const Button = ({ children, type, onClick, buttonFormat, buttonSize }) => {
+export const Button = ({
+  children,
+  type,
+  onClick,
+  buttonFormat,
+  buttonSize,
+}) => {
   const checkButtonFormat = Format.includes(buttonFormat)
     ? buttonFormat
     : Format[0];
@@ -24,5 +30,3 @@ const Button = ({ children, type, onClick, buttonFormat, buttonSize }) => {
     </Link>
   );
 };
-
-export default Button;

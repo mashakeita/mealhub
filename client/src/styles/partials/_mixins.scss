@@ -135,7 +135,7 @@
 
 /* Responsive mixins */
 @mixin mobile-only {
-  @media (max-width: 769px) {
+  @media (max-width: 907px) {
     @content;
   }
 }

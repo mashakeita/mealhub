@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-
 import {
   faBars,
   faTimes,
@@ -7,12 +6,12 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
-import { Button } from "./Button";
+import { Button } from "../Button/Button";
 import "./Header.scss";
 
 const Header = () => {
   const [click, setClick] = useState(false);
-  const { button, setButton } = useState(true);
+  const [button, setButton] = useState(true);
   const handleClick = () => setClick(!click);
   const closeMenu = () => setClick(false);
 
@@ -34,7 +33,7 @@ const Header = () => {
     <>
       <nav className="header">
         <div className="header__container">
-          <Link to="/" className="header__title">
+          <Link to="/" className="header__title" onClick={closeMenu}>
             MealHub
             <FontAwesomeIcon icon={faPizzaSlice} className="header__logo" />
           </Link>
@@ -65,7 +64,7 @@ const Header = () => {
                 className="header__links"
                 onClick={closeMenu}
               >
-                Mealplans
+                Meal Plans
               </Link>
             </li>
             <li className="header__item">

@@ -14,7 +14,6 @@
 body {
   margin: 0;
   padding: 0;
-  //   background: $background-light;
   font-family: "Montserrat";
 }
 
@@ -34,6 +33,17 @@ ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
+}
+
+.home,
+.recipies,
+.mealplans,
+.sign-up {
+  display: flex;
+  height: 90vh;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
 }
 
 /* Typography based on Mobile First*/
