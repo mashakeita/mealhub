@@ -1,23 +1,43 @@
-import React from "react";
+import React, { useState } from "react";
 import { Button } from "../Button/Button";
 import "../../styles/App.scss";
 import "./Hero.scss";
+import { Link } from "react-router-dom";
+import { Modal } from "../../components/Modal/Modal";
 
 function Hero() {
+  const [showModal, setShowModal] = useState(false);
+
+  const openModal = () => {
+    setShowModal((prev) => !prev);
+  };
+
   return (
     <div className="hero">
       <video src="/videos/foodsreel.mp4" autoPlay loop muted />
       <h1 className="hero__title">RECIPIES YOU'LL LOVE</h1>
       <p className="hero__text">Made right at home</p>
-      <div className="hero-button">
-        {/* <Button
+      <div className="hero-btns">
+        <Link to="/mealplans">
+          <Button
+            className="btns"
+            buttonFormat="btn--outline"
+            buttonSize="btn--large"
+          >
+            BROWSE RECIPIES
+          </Button>
+        </Link>
+
+        <Button
+          onClick={openModal}
           className="btns"
-          buttonStyle="btn--outline"
+          buttonFormat="btn--outline"
           buttonSize="btn--large"
         >
-          FIND RECIPIES
-        </Button> */}
+          SIGN UP NOW
+        </Button>
       </div>
+      <Modal showModal={showModal} setShowModal={setShowModal} />
     </div>
   );
 }
