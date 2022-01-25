@@ -1,0 +1,38 @@
+<% include ../partials/boilerplate %>
+<header>
+    <h3 class='logo'>Now We're Cookin'</h3>
+    <nav>
+        <li><a href='/'>Home</a></li>
+        <li><a href='/recipes'>Recipes</a></li>
+        <li><a href='/recipes/add'>Add</a></li>
+        <li><a href='/search'>Search</a></li>
+    </nav>
+</header>
+<div class='container'>
+    <div class='polaroid single'>
+        <div class='polaroid_photo'>
+            <img src='<%= recipe.photo %>' alt='<%= recipe.title %> dish'>
+        </div>
+        <div class='polaroid_content'>
+            <h1 class='individ recipe_title'><%= recipe.title %></h1>
+        </div>
+    </div>
+    <div class='description'>
+        <p><span class='title'>Author: </span><%= recipe.author %></p>
+        <p><span class='title'>Category: </span><%= recipe.category_type %></p>
+        <span class='title'>Ingredients: </span>
+        <% recipe.ingredients.forEach(function(ingredient) { %>
+            <p><%= ingredient %></p>
+        <% }) %>
+        <p class='description_text'><span class='title'>Directions:</br> </span><%= recipe.description %></p>
+        <div class='button_container'>
+            <a class='button' href='/recipes/edit/<%= recipe.id %>'>Edit</a>
+            <form class='single_form' method='POST' action='/recipes/<%= recipe.id %>?_method=DELETE'>
+                <input type='submit' class='button' value='Delete' />
+            </form>
+        </div>
+        <a class='back' href='/recipes'>&larr; Return to recipe list</a>
+    </div>
+</div> <!-- end of container -->
+<% include ../partials/end %>
+   

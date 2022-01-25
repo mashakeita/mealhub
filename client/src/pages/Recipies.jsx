@@ -1,16 +1,15 @@
-// import React from "react";
-// import RecipesContainer from "../recipes/RecipesContainer";
-// import SearchForm from "../components/forms/SearchForm";
-// import "../styles/App.scss";
+import React from "react";
+import RecipeCard from "../components/RecipeCard/RecipeCard";
+import "../styles/App.scss";
 
-// function Recipies() {
-//   return <>
-//    <div className="d-flex justify-content-center align-items-center my-5 search-container mx-auto">
-//         <SearchForm />
-//       </div>
+function Recipies() {
+  return (
+    <>
+      <div className="">
+        <RecipeCard />
+      </div>
+    </>
+  );
+}
 
-//       <RecipesContainer />
-//     </>;
-// }
-
-// export default Recipies;
+export default Recipies;

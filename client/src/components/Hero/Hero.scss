@@ -63,5 +63,6 @@ video {
   @include mixins.mobile-only {
     display: block;
     text-decoration: none;
+    padding-top: 20px;
   }
 }
