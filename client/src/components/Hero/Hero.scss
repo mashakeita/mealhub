@@ -45,23 +45,24 @@ video {
       margin-top: 20px;
     }
   }
-  &__button {
+  &-btns {
     margin-top: 32px;
   }
-  &__button .btn {
+  &-btns .btn {
     margin: 6px;
   }
 }
 
 .btn {
-  @include mixins.tablet {
+  @include mixins.mobile-only {
     width: 100%;
   }
 }
 
 .btn-mobile {
-  @include mixins.tablet {
+  @include mixins.mobile-only {
     display: block;
     text-decoration: none;
+    padding-top: 20px;
   }
 }

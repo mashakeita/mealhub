@@ -1,14 +1,24 @@
-require("dotenv").config();
-const express = require("express");
-const cors = require("cors");
+import express from 'express';
+import bodyParser from 'body-parser';
+import mongoose from 'mongoose';
+import cors from 'cors';
+
+import postRoutes from './routes/posts.js';
 
 const app = express();
 
-const { PORT, CLIENT_URL } = process.env;
 
-app.use(cors({ origin: CLIENT_URL }));
-app.use(express.json());
+app.use(bodyParser.json({ limit: '30mb', extended: true }))
+app.use(bodyParser.urlencoded({ limit: '30mb', extended: true }))
+app.use(cors());
 
-app.listen(PORT, () =>
-  console.log(`🚀🚀 Server is live @http://localhost:${PORT}`)
-);
+app.use('/posts', postRoutes);
+
+const CONNECTION_URL = 'mongodb+srv://javascript:Dec!2018@cluster0.fdkdq.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
+const PORT = process.env.PORT|| 5000;
+
+mongoose.connect(CONNECTION_URL, { useNewUrlParser: true, useUnifiedTopology: true })
+  .then(() => app.listen(PORT, () => console.log(`Server Running on Port: http://localhost:${PORT}`)))
+  .catch((error) => console.log(`${error} did not connect`));
+
+  mongoose.connect(CONNECTION_URL).then(()=>{console.log('...')})

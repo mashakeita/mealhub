@@ -1,0 +1,33 @@
+<% include ../partials/boilerplate %>
+<header>
+    <h3 class='logo' id='top'>Now We're Cookin'</h3>
+    <nav>
+        <li><a href='/'>Home</a></li>
+        <li><a class='current' href='/recipes'>Recipes</a></li>
+        <li><a href='/recipes/add'>Add</a></li>
+        <li><a href='/search'>Search</a></li>
+    </nav>
+</header>
+
+<div class='container'>
+    <h1 class='primary'>Recipes</h1>
+    <hr>
+    <% recipesData.forEach(function(recipe) { %>
+        <div class='polaroid single index'>
+            <div class='polaroid_photo'>
+                <img src='<%= recipe.photo %>' alt='<%= recipe.title %> dish'>
+            </div>
+            <div class='polaroid_content'>
+                <h1 class='secondary recipe_title'><%= recipe.title %></h1>
+                <h2 class='tertiary'>Category: <%= recipe.category_type %></h2>
+                <div class='button_container'>
+                    <a class='button black' href='/recipes/<%= recipe.id %>'>Info</a>
+                </div>
+            </div>
+        </div>
+    <% }) %>
+</div>
+<a class='button' id='topButton' href='#top'>Back To Top</a>
+<a class='button' href='/recipes/add'>Add a new recipe</a>
+<hr>
+<% include ../partials/end %>

@@ -68,16 +68,16 @@ const Header = () => {
               </Link>
             </li>
             <li className="header__item">
-              <Link
+              {/* <Link
                 to="/sign-up"
                 className="header__links-mobile"
                 onClick={closeMenu}
               >
                 Sign Up
-              </Link>
+              </Link> */}
             </li>
           </ul>
-          {button && <Button buttonFormat="btn--outline">SIGN UP</Button>}
+          {/* {button && <Button buttonFormat="btn--outline">SIGN UP</Button>} */}
         </div>
       </nav>
     </>

@@ -1,0 +1,46 @@
+<% include ../partials/boilerplate %>
+<header>
+  <h3 class='logo'>Now We're Cookin'</h3>
+  <nav>
+    <li><a href='/'>Home</a></li>
+    <li><a href='/recipes'>Recipes</a></li>
+    <li><a class='current' href='/recipes/add'>Add</a></li>
+    <li><a href='/search'>Search</a></li>
+  </nav>
+</header>
+<div class='container'>
+  <h1 class='primary'>New Recipe</h1>
+  <hr>
+  <div class='polaroid single'>
+    <div class='polaroid_photo blank'></div>
+    <div class='polaroid_content'>
+      <label for='photourl' class='title'>Photo Url:</br><input name='photourl' id='photourl' type='text' placeholder='paste image url here'/></label></br>
+    </div>
+  </div>
+  <form class='input_form' id='input_form' method='POST' action='/recipes'>
+    <div class='button_container'>
+      <label for='title' class='title'>Title:<input name='title' id='title' type='text' class='form'/></label></br>
+      <label for='author' class='title'>Author:<input name='author' id='author' type='text' class='form'/></label></br>
+      <label for='category_type' class='title'>Category
+        <select name='category_type' id='category'>
+          <option value='1'>Seafood</option>
+          <option value='2'>Fish</option>
+          <option value='3'>Beef</option>
+          <option value='4'>Poultry</option>
+          <option value='5'>Pork</option>
+          <option value='6'>Vegetarian</option>
+          <option value='7'>Misc.</option>
+        </select>
+      </label></br>
+      <label id='ingredientlist' class='title'>Ingredients:</br></br>
+      </label></br>
+      <button type='button' class='button add_ingredient'>Add Ingredient</button></br>
+      <input name='ingredients' class='hidden' id='ingredients' type='text'/> 
+      <input name='photo' class='hidden' id='photosub' type='text'/> 
+      <label for='description' class='title'>Directions:</br><textarea name='description' id='description' class='form' placeholder='Tell us about your recipe here...'></textarea></label></br>
+      <input type='submit' class='button' id='submit1' value='Create Recipe' />
+    </div>
+  </form>
+</div> <!-- end of container -->
+<script src='../../static/js/main.js'></script>
+<% include ../partials/end %>
