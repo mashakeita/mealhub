@@ -36,7 +36,7 @@ const RecipeCard = () => {
               value={searchQuery}
               onChange={OnTextChange}
             />
-            <i className="fas fa-search"></i>
+            <i className="fa fa-search"></i>
           </form>
         </div>
       </div>

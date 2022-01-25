@@ -1,7 +1,13 @@
 import React from "react";
 import validate from "../Modal/validateInfo";
 import useForm from "../Modal/useForm";
-
+import { useHistory } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import Button from "../Button/Button";
+import { faLock } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import FormInput from "./CustomInput";
+import { signin, signup } from "../../actions/auth/auth";
 import "../Modal/Modal.scss";
 
 const SignupForm = ({ submitForm }) => {
