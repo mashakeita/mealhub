@@ -6,7 +6,7 @@ import Hero from "./components/Hero/Hero";
 import MealPlans from "../src/pages/MealPlans";
 import Recipies from "../src/pages/Recipies";
 import RecipeCard from "./components/RecipeCard/RecipeCard";
-import Signup from "../src/pages/Signup";
+
 import "../src/styles/App.scss";
 
 function App() {
