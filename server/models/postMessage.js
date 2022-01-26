@@ -1,8 +1,8 @@
 import mongoose from 'mongoose';
 
-const postFormat = mongoose.Schema({
-    name: String,
-    type: String,
+const postSchema = mongoose.Schema({
+    title: String,
+    message: String,
     creator: String,
     tags: [String],
     selectedFile: String,
@@ -16,6 +16,6 @@ const postFormat = mongoose.Schema({
     },
 })
 
-var PostRecipe = mongoose.model('PostMessage', postSchema);
+var PostMessage = mongoose.model('PostMessage', postSchema);
 
-export default PostRecipe;
+export default PostMessage;
