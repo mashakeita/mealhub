@@ -1,0 +1,18 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/variables" as *;
+
+.button {
+    width: 100%;
+    @include buttonStyle;
+    @include font-stack-button-labels;
+    padding: 0.65rem;
+    @include tablet {
+        @include buttonStyleTablet;
+        width:33%;
+        }
+
+    &__icon{
+        float: left;
+    }    
+}

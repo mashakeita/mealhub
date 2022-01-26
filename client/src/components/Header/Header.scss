@@ -70,7 +70,7 @@
     }
   }
   &__item {
-    height: 80px;
+    height: 130px;
   }
   &__links {
     color: #fff;
@@ -86,7 +86,7 @@
     }
   }
   &__links:hover {
-    border-bottom: 4px solid #fff;
+    border-bottom: 3px solid #fff;
     transition: all 0.2s ease-out;
     @include mixins.mobile-only {
       background-color: #fff;

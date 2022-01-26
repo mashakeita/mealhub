@@ -60,11 +60,11 @@ const Header = () => {
             </li>
             <li className="header__item">
               <Link
-                to="/mealplans"
+                to="/create-recipe"
                 className="header__links"
                 onClick={closeMenu}
               >
-                Meal Plans
+                My Recipies
               </Link>
             </li>
             <li className="header__item">

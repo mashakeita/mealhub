@@ -44,7 +44,7 @@ export const Modal = ({ showModal, setShowModal }) => {
             ×
           </span>
           <div className="form-content-left">
-            <img className="form-img" src="img/mealprep.jpg" alt="spaceship" />
+            <img className="form-img" src="img/mealimg.jpg" alt="spaceship" />
           </div>
           {!formSubmitted ? (
             <SignupForm submitForm={submitForm} />

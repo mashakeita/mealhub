@@ -23,3 +23,55 @@
   font-weight: 600;
   font-style: normal;
 }
+
+@mixin font-stack($font-size, $font-weight, $line-height) {
+  font-style: normal;
+  font-size: $font-size;
+  font-weight: $font-weight;
+  line-height: $line-height;
+}
+
+// Header page
+@mixin font-stack-page-header-mobile {
+  @include font-stack(1.5rem, 700, 2rem);
+}
+
+@mixin font-stack-page-header-tablet-desktop {
+  @include font-stack(2.0625rem, 700, 2.75rem);
+}
+
+// Section header
+@mixin font-stack-section-header {
+  @include font-stack(0.8125rem, 700, 1.125rem);
+}
+
+@mixin font-stack-section-header-tablet {
+  @include font-stack(0.875rem, 700, 1.375rem);
+}
+
+// Subheader
+@mixin font-stack-subheader-mobile {
+  @include font-stack(0.8125rem, 600, 1.125rem);
+}
+
+@mixin font-stack-subheader-tablet-desktop {
+  @include font-stack(0.875rem, 700, 1.375rem);
+}
+
+// Body
+@mixin font-stack-body-mobile {
+  @include font-stack(0.8125rem, 400, 1.125rem);
+}
+
+@mixin font-stack-body-tablet-desktop {
+  @include font-stack(0.875rem, 400, 1.375rem);
+}
+
+// Labels&Buttons
+@mixin font-stack-button-labels {
+  @include font-stack(0.75rem, 600, 1.25rem);
+}
+
+@mixin font-placeholder-text {
+  @include font-stack-body-mobile;
+}

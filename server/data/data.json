@@ -1,0 +1,39 @@
+{
+    "meals": [
+      {
+        "text": "Waffles",
+        "ingredients": "5/3 @ 8:00am",
+        "instructions": "Breakfast",
+        "image": "",
+        "id": 1
+      },
+      {
+        "text": "Pizza",
+        "ingredients": "5/3 @ 8:00am",
+        "instructions": "Breakfast",
+        "image": "",
+        "id": 2
+      },
+      {
+        "text": "Waffles",
+        "ingredients": "5/3 @ 8:00am",
+        "instructions": "Breakfast",
+        "image": "",
+        "id": 3
+      },
+      {
+        "text": "Waffles",
+        "ingredients": "5/3 @ 8:00am",
+        "instructions": "Breakfast",
+        "image": "",
+        "id": 4
+      },
+      {
+        "text": "Waffles",
+        "ingredients": "5/3 @ 8:00am",
+        "instructions": "Breakfast",
+        "image": "",
+        "id": 5
+      }
+    ]
+  }

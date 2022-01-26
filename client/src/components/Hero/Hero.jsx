@@ -18,8 +18,14 @@ function Hero() {
       <h1 className="hero__title">RECIPIES YOU'LL LOVE</h1>
       <p className="hero__text">Made right at home</p>
       <div className="hero-btns">
-        <Link className="btns btn--outline btn--large" to="/recipies">
-          BROWSE RECIPIES
+        <Link to="/recipies">
+          <Button
+            className="btns"
+            buttonFormat="btn--outline"
+            buttonSize="btn--large"
+          >
+            BROWSE RECIPIES
+          </Button>
         </Link>
 
         <Button

@@ -12,10 +12,7 @@ const SignupForm = ({ submitForm }) => {
   return (
     <div className="form-content-right">
       <form onSubmit={handleSubmit} className="form" noValidate>
-        <h1>
-          Get started with us today! Create your account by filling out the
-          information below.
-        </h1>
+        <h1>Get started with us today!</h1>
         <div className="form-inputs">
           <label className="form-label">Username</label>
           <input
@@ -69,9 +66,6 @@ const SignupForm = ({ submitForm }) => {
         <button className="form-input-btn" type="submit">
           Sign up
         </button>
-        <span className="form-input-login">
-          Already have an account? Login <a href="#">here</a>
-        </span>
       </form>
     </div>
   );

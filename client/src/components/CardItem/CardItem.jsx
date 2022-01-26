@@ -44,6 +44,7 @@ const CardItem = (props) => {
         {/* <div className="card-container">
         <div className="card-box">
           <div className="card-image"> */}
+
         <img className="recipe_icon" src={image} alt={label} />
         {/* </div> */}
         {/* <div className="card-content"> */}
