@@ -8,12 +8,17 @@
     margin: 0;
     height: 710vh;
     width: 100%;
-    background: #2e2d38;
+    background-image: url(../../../public/img/background.jpg);
+    background-size: cover;
     @include mixins.tablet {
       height: 400vh;
     }
     @include mixins.desktop {
       height: 310vh;
+    }
+    @include mixins.mobile-only {
+      background-size: 500px 700px;
+      // background-repeat: no-repeat;
     }
   }
   &__box {
@@ -21,7 +26,8 @@
   }
 
   &__header {
-    color: white;
+    color: black;
+    font-weight: 600;
     display: flex;
     justify-content: center;
     align-items: center;

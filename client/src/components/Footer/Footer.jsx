@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { faPizzaSlice } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./Footer.scss";
 
 function Footer() {
@@ -37,50 +39,35 @@ function Footer() {
           <div className="footer__logo">
             <Link to="/" className="social__logo">
               MealHub
-              <i className="fab fa-typo3" />
+              <FontAwesomeIcon icon={faPizzaSlice} className="header__logo" />
             </Link>
           </div>
           <small className="social__rights">MealHub © 2020</small>
           <div className="social__icons">
             <Link
               className="social__icon-link facebook"
-              to="/"
+              to="https://www.facebook.com/"
               target="_blank"
               aria-label="Facebook"
             >
-              <i className="fab fa-facebook-f" />
+              <img className="footer__socials" src="img/icon-facebook.png" />
             </Link>
             <Link
               className="social__icon-link instagram"
-              to="/"
+              to="https://www.instagram.com/"
               target="_blank"
               aria-label="Instagram"
             >
-              <i className="fab fa-instagram" />
+              <img className="footer__socials" src="img/icon-instagram.png" />
             </Link>
-            <Link
-              className="social__icon-link youtube"
-              to="/"
-              target="_blank"
-              aria-label="Youtube"
-            >
-              <i className="fab fa-youtube" />
-            </Link>
+
             <Link
               className="social__icon-link twitter"
-              to="/"
+              to="https://www.twitter.com/"
               target="_blank"
               aria-label="Twitter"
             >
-              <i className="fab fa-twitter" />
-            </Link>
-            <Link
-              className="social__icon-link twitter"
-              to="/"
-              target="_blank"
-              aria-label="LinkedIn"
-            >
-              <i className="fab fa-linkedin" />
+              <img className="footer__socials" src="img/icon-twitter.png" />
             </Link>
           </div>
         </div>
