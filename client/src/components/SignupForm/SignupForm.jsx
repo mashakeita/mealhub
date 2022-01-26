@@ -1,10 +1,10 @@
 import React from "react";
 import validate from "../Modal/validateInfo";
-import useForm from "../Modal/useForm";
+import newForm from "../Modal/useForm";
 import "../Modal/Modal.scss";
 
 const SignupForm = ({ submitForm }) => {
-  const { handleChange, handleSubmit, values, errors } = useForm(
+  const { handleChange, handleSubmit, values, errors } = newForm(
     submitForm,
     validate
   );
