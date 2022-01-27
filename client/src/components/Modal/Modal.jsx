@@ -1,58 +1,29 @@
-import React, { useState, useRef, useEffect, useCallback } from "react";
-import "../Modal/Modal.scss";
-import SignupForm from "../SignupForm/SignupForm";
+import React, { useState } from "react";
+import "./Form.css";
+import FormSignup from "./FormSignup";
 import FormSuccess from "./FormSuccess";
 
-export const Modal = ({ showModal, setShowModal }) => {
-  const [formSubmitted, setFormSubmitted] = useState(false);
-  const modalRef = useRef();
+const Form = () => {
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
   function submitForm() {
-    setFormSubmitted(true);
+    setIsSubmitted(true);
   }
-
-  const closeModal = (e) => {
-    if (modalRef.current === e.target) {
-      setShowModal(false);
-    }
-  };
-
-  const keyPress = useCallback(
-    (e) => {
-      if (e.key === "Escape" && showModal) {
-        setShowModal(false);
-        console.log("I pressed");
-      }
-    },
-    [setShowModal, showModal]
-  );
-
-  useEffect(() => {
-    document.addEventListener("keydown", keyPress);
-    return () => document.removeEventListener("keydown", keyPress);
-  }, [keyPress]);
-
   return (
     <>
-      {showModal ? (
-        <div className="form-container" showModal={showModal}>
-          <span
-            onClick={closeModal}
-            onClick={() => setShowModal((prev) => !prev)}
-            className="close-btn"
-          >
-            ×
-          </span>
-          <div className="form-content-left">
-            <img className="form-img" src="img/mealimg.jpg" alt="spaceship" />
-          </div>
-          {!formSubmitted ? (
-            <SignupForm submitForm={submitForm} />
-          ) : (
-            <FormSuccess />
-          )}
+      <div className="form-container">
+        <span className="close-btn">×</span>
+        <div className="form-content-left">
+          <img className="form-img" src="img/img-2.svg" alt="spaceship" />
         </div>
-      ) : null}
+        {!isSubmitted ? (
+          <FormSignup submitForm={submitForm} />
+        ) : (
+          <FormSuccess />
+        )}
+      </div>
     </>
   );
 };
+
+export default Form;

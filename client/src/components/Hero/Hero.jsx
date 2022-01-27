@@ -3,7 +3,7 @@ import { Button } from "../Button/Button";
 import "../../styles/App.scss";
 import "./Hero.scss";
 import { Link } from "react-router-dom";
-import { Modal } from "../../components/Modal/Modal";
+// import { Modal } from "../../components/Modal/Modal";
 
 function Hero() {
   const [showModal, setShowModal] = useState(false);
@@ -37,7 +37,7 @@ function Hero() {
           SIGN UP NOW
         </Button>
       </div>
-      <Modal showModal={showModal} setShowModal={setShowModal} />
+      {/* <Modal showModal={showModal} setShowModal={setShowModal} /> */}
     </div>
   );
 }

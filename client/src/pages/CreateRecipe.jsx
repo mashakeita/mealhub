@@ -104,13 +104,13 @@ class CreateRecipe extends Component {
             </div>
             <div className="upload-video__button-container">
               <SubmitButton title="SUBMIT" />
-              <button
+              {/* <button
                 className="upload-video__button-reset"
                 value="reset"
                 onClick={this.resetHandler}
               >
                 CANCEL
-              </button>
+              </button> */}
             </div>
           </form>
 

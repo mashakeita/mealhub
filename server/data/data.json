@@ -80,16 +80,5 @@
       }
     ],
     "image": "http://upload.wikimedia.org/wikipedia/commons/c/c7/Spinach_pizza.jpg"
-  },
-  {
-    "id": "cb9424da-46ad-4a6a-b86a-ab752dff99d8",
-    "text": "Salad Olivier",
-    "ingredients": [
-      {
-        "quantity": "",
-        "name": "Baked potatoes, Boiled eggs. Carrorts"
-      }
-    ],
-    "image": "https://honestcooking.com/wp-content/uploads/2013/12/Screen-Shot-2013-12-10-at-12.41.37-PM.png"
   }
 ]
