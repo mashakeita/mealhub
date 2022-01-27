@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import Axios from "axios";
 import CardItem from "../CardItem/CardItem";
 import "../RecipeCard/RecipeCard.scss";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSearch } from "@fortawesome/free-solid-svg-icons";
 
 const APP_ID = "c3a6418e";
 const APP_KEY = "db06a16368ed1b90ac84839bfbd54bdf";
@@ -36,7 +38,7 @@ const RecipeCard = () => {
               value={searchQuery}
               onChange={OnTextChange}
             />
-            <i className="fas fa-search"></i>
+            <FontAwesomeIcon icon={faSearch} className="search-icon" />
           </form>
         </div>
       </div>

@@ -3,7 +3,7 @@ import { Button } from "../Button/Button";
 import "../../styles/App.scss";
 import "./Hero.scss";
 import { Link } from "react-router-dom";
-import { Modal } from "../../components/Modal/Modal";
+// import { Modal } from "../../components/Modal/Modal";
 
 function Hero() {
   const [showModal, setShowModal] = useState(false);
@@ -18,8 +18,14 @@ function Hero() {
       <h1 className="hero__title">RECIPIES YOU'LL LOVE</h1>
       <p className="hero__text">Made right at home</p>
       <div className="hero-btns">
-        <Link className="btns btn--outline btn--large" to="/recipies">
-          BROWSE RECIPIES
+        <Link to="/recipies">
+          <Button
+            className="btns"
+            buttonFormat="btn--outline"
+            buttonSize="btn--large"
+          >
+            BROWSE RECIPIES
+          </Button>
         </Link>
 
         <Button
@@ -31,7 +37,7 @@ function Hero() {
           SIGN UP NOW
         </Button>
       </div>
-      <Modal showModal={showModal} setShowModal={setShowModal} />
+      {/* <Modal showModal={showModal} setShowModal={setShowModal} /> */}
     </div>
   );
 }

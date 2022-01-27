@@ -157,3 +157,74 @@
     @content;
   }
 }
+
+@mixin flex(
+  $justify-content: flex-start,
+  $align-items: stretch,
+  $flex-direction: row,
+  $flex-wrap: nowrap
+) {
+  display: flex;
+  justify-content: $justify-content;
+  align-items: $align-items;
+  flex-direction: $flex-direction;
+  flex-wrap: $flex-wrap;
+}
+
+@mixin styleInputMobile {
+  border-radius: 4px;
+  border: 1px solid $line-divider-color;
+  min-height: 2.25rem;
+}
+@mixin styleInputTablet {
+  border-radius: 4px;
+  border: 1px solid $line-divider-color;
+  min-height: 2.5rem;
+  max-height: 2.5rem;
+}
+
+@mixin buttonStyle {
+  min-height: 2.5rem;
+  max-height: 2.5rem;
+  background-color: $button-color;
+  border: none;
+  border-radius: 4px;
+}
+
+@mixin buttonStyleTablet {
+  height: 2.5rem;
+  max-width: 9.375rem;
+  background-color: $button-color;
+  border: none;
+  border-radius: 4px;
+}
+
+@mixin dividerStyleBottom {
+  border-bottom: 1px solid $line-divider-color;
+}
+@mixin dividerStyleBottomNone {
+  border-bottom: none;
+}
+
+@mixin dividerStyleTop {
+  border-top: 1px solid $line-divider-color;
+}
+
+@mixin dividerStyleRight {
+  border-right: 1px solid $line-divider-color;
+}
+
+@mixin dividerStyleLeft {
+  border-left: 1px solid $line-divider-color;
+}
+
+@mixin borderStyle {
+  border: none;
+  border-radius: 4px;
+}
+
+@mixin formStyle {
+  background-color: $bg-color-form-field;
+  outline: none;
+  padding: 0.75rem;
+}

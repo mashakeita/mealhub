@@ -1,17 +1,33 @@
+@use "../../styles/partials/mixins";
+@use "../../styles/partials/global" as *;
+@use "../../styles/partials/variables" as *;
+
 .search {
   &__container {
     padding: 0;
     margin: 0;
-    height: 100vh;
+    height: 710vh;
     width: 100%;
-    background: #07051a;
+    background-image: url(../../../public/img/background.jpg);
+    background-size: cover;
+    @include mixins.tablet {
+      height: 400vh;
+    }
+    @include mixins.desktop {
+      height: 310vh;
+    }
+    @include mixins.mobile-only {
+      background-size: 500px 700px;
+      // background-repeat: no-repeat;
+    }
   }
   &__box {
     padding-top: 40px;
   }
 
   &__header {
-    color: white;
+    color: black;
+    font-weight: 600;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -101,4 +117,8 @@ input {
     gap: 20px;
     justify-content: space-evenly;
   }
+}
+
+.search-icon {
+  font-size: 30px;
 }

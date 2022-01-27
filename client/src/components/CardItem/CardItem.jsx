@@ -1,4 +1,8 @@
 import React, { useState } from "react";
+import Dialog from "@material-ui/core/Dialog";
+import DialogContent from "@material-ui/core/DialogContent";
+import DialogTitle from "@material-ui/core/DialogTitle";
+import DialogActions from "@material-ui/core/DialogActions";
 import "../CardItem/CardItem.scss";
 
 const CardItem = (props) => {
@@ -8,39 +12,39 @@ const CardItem = (props) => {
   return (
     <>
       <div className="recipe__container">
-        <span
-          onClose={() => console.log("close")}
+        <Dialog
+          onClose={() => console.log("adsadad")}
           aria-labelledby="simple-dialog-title"
           open={!!show}
         >
-          <h2 className="card__title">Ingredients</h2>
-          <div className="card__content">
+          <DialogTitle>Ingredients</DialogTitle>
+          <DialogContent>
             <p className="card__name">{label}</p>
-            <div className="card__table">
-              <div className="card__head">
-                <p>Ingredient</p>
-                <p>Weight</p>
-              </div>
-              <div className="card__body">
+            <img className="recipe_icon" src={image} alt={label} />
+            <table>
+              <thead>
+                <th>Ingredients</th>
+              </thead>
+              <tbody>
                 {ingredients.map((ingredient, index) => (
-                  <div key={index} className="ingredient-list">
-                    <p>{ingredient.text}</p>
-                    <p>{ingredient.weight}</p>
-                  </div>
+                  <tr key={index} className="ingredient-list">
+                    <td>{ingredient.text}</td>
+                  </tr>
                 ))}
-              </div>
-            </div>
-          </div>
-          <div className="card__actions">
+              </tbody>
+            </table>
+          </DialogContent>
+          <DialogActions>
             <button className="recipe__newtab" onClick={() => window.open(url)}>
               See More
             </button>
             <button onClick={() => setShow("")}>Close</button>
-          </div>
-        </span>
+          </DialogActions>
+        </Dialog>
         {/* <div className="card-container">
         <div className="card-box">
           <div className="card-image"> */}
+
         <img className="recipe_icon" src={image} alt={label} />
         {/* </div> */}
         {/* <div className="card-content"> */}
@@ -52,40 +56,6 @@ const CardItem = (props) => {
           <a href="#">See Complete Recipe</a>
         </div>
       </div>
-      {/* <div className="card">
-      <div className="card-container">
-        <div className="card-box">
-          <div className="card-image">
-            <img className="card-icon" src="img/mealprep.jpg" alt="" />
-          </div>
-          <div className="card-content">
-            <h2 className="card-title">Ingredients</h2>
-            <div className="card-button">
-              <a href="#">Ingredients</a>
-            </div>
-            <div className="card-button">
-              <a href="#">See Complete Recipe</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="card-container">
-        <div className="card-box">
-          <div className="card-image">
-            <img className="card-icon" src="img/mealprep.jpg" alt="" />
-          </div>
-          <div className="card-content">
-            <h2 className="card-title">Ingredients</h2>
-            <div className="card-button">
-              <a href="#">Ingredients</a>
-            </div>
-            <div className="card-button">
-              <a href="#">See Complete Recipe</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div> */}
     </>
   );
 };

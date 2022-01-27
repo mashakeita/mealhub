@@ -71,6 +71,9 @@
   }
   &__item {
     height: 80px;
+    @include mixins.mobile-only {
+      height: 130px;
+    }
   }
   &__links {
     color: #fff;

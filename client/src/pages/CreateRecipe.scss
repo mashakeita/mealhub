@@ -1,0 +1,167 @@
+@use "../styles/partials/mixins" as *;
+@use "../styles/partials/typography" as *;
+@use "../styles/partials/variables" as *;
+
+.upload-video {
+  @include dividerStyleTop;
+  padding: 1.5rem 2rem;
+  @include tablet {
+    padding: 2.25rem;
+  }
+  @include desktop {
+    padding: 2.25rem 8rem;
+  }
+
+  &__title {
+    width: 100%;
+    @include font-stack-page-header-mobile;
+    padding-bottom: 2rem;
+    @include tablet {
+      padding-bottom: 1.5rem;
+      @include font-stack-page-header-tablet-desktop;
+      @include dividerStyleBottom;
+    }
+  }
+
+  &__form {
+    @include flex(space-between, flex-start, column, nowrap);
+  }
+
+  &__form-container {
+    width: 100%;
+    @include flex(space-between, flex-start, column, nowrap);
+
+    @include desktop {
+      @include flex(space-between, flex-start, row, nowrap);
+      padding: 1.5rem 0;
+      @include dividerStyleBottom;
+    }
+  }
+
+  &__preview-image {
+    padding: 0rem;
+    width: 100%;
+    margin-bottom: 1rem;
+    border: none;
+    @include tablet {
+      margin: 1.5rem 0;
+      width: 50%;
+    }
+    @include desktop {
+      width: 36%;
+      margin: 0rem;
+      max-width: 23.5rem;
+      height: 13.75rem;
+    }
+  }
+
+  &__title-image {
+    width: 100%;
+    padding-top: -40px;
+    margin-top: -20px;
+    @include font-stack-subheader-mobile;
+    margin-bottom: 0.25rem;
+  }
+
+  &__image {
+    width: 70%;
+    object-fit: cover;
+    vertical-align: middle;
+    @include borderStyle;
+  }
+
+  &__video-description {
+    padding: 0rem;
+    border: none;
+    width: 100%;
+    margin-bottom: 1rem;
+    @include flex(space-between, flex-start, column, nowrap);
+    @include tablet {
+      padding-bottom: 1.5rem;
+      margin-bottom: 0rem;
+      @include dividerStyleBottom;
+    }
+    @include desktop {
+      width: 62%;
+      @include dividerStyleBottomNone;
+      padding-bottom: 0rem;
+    }
+  }
+
+  &__label {
+    width: 100%;
+    @include font-stack-subheader-mobile;
+    margin-bottom: 0.25rem;
+  }
+
+  &__input-title {
+    @include formStyle;
+    @include styleInputMobile;
+    width: 100%;
+    min-width: 15rem;
+    min-height: 2.5rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 0 0px 1000px $bg-color-form-field inset;
+    @include tablet {
+      margin-bottom: 1.5rem;
+    }
+    @include desktop {
+      margin-bottom: 2.25rem;
+    }
+
+    &::placeholder {
+      @include font-placeholder-text;
+    }
+
+    &[type="text"] {
+      @include font-placeholder-text;
+    }
+  }
+
+  &__input-description {
+    @include formStyle;
+    @include styleInputMobile;
+    width: 100%;
+    min-width: 15rem;
+    min-height: 6rem;
+    resize: none;
+
+    &::placeholder {
+      @include font-placeholder-text;
+    }
+
+    &[type="text"] {
+      @include font-placeholder-text;
+    }
+  }
+
+  &__button-container {
+    width: 100%;
+    @include flex(space-between, flex-end, column, nowrap);
+    @include tablet {
+      @include flex(flex-start, flex-end, row-reverse, nowrap);
+      margin-top: 1.5rem;
+    }
+  }
+
+  &__button-reset {
+    width: calc(100% - 1.5rem);
+    margin-top: 1rem;
+    border: none;
+    min-height: 2.5rem;
+    max-height: 2.5rem;
+    background-color: $bg-color;
+    @include font-stack-button-labels;
+    color: $button-color;
+    @include tablet {
+      width: 30%;
+      max-width: 9.375rem;
+      margin-top: 0rem;
+    }
+  }
+}
+
+.video__container {
+  background-image: url(../../public/img/foods.jpg);
+  background-size: cover;
+}
