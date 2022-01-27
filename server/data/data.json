@@ -1,39 +1,121 @@
-{
-    "meals": [
+[
+  {
+    "text": "Crock Pot Roast",
+    "ingredients": [
       {
-        "text": "Waffles",
-        "ingredients": "5/3 @ 8:00am",
-        "instructions": "Breakfast",
-        "image": "",
-        "id": 1
+        "quantity": "1",
+        "name": " beef roast"
       },
       {
-        "text": "Pizza",
-        "ingredients": "5/3 @ 8:00am",
-        "instructions": "Breakfast",
-        "image": "",
-        "id": 2
+        "quantity": "1 package",
+        "name": "brown gravy mix"
       },
       {
-        "text": "Waffles",
-        "ingredients": "5/3 @ 8:00am",
-        "instructions": "Breakfast",
-        "image": "",
-        "id": 3
+        "quantity": "1 package",
+        "name": "dried Italian salad dressing mix"
       },
       {
-        "text": "Waffles",
-        "ingredients": "5/3 @ 8:00am",
-        "instructions": "Breakfast",
-        "image": "",
-        "id": 4
+        "quantity": "1 package",
+        "name": "dry ranch dressing mix"
       },
       {
-        "text": "Waffles",
-        "ingredients": "5/3 @ 8:00am",
-        "instructions": "Breakfast",
-        "image": "",
-        "id": 5
+        "quantity": "1/2 cup",
+        "name": "water"
       }
-    ]
+    ],
+    "image": "http://img.sndimg.com/food/image/upload/w_266/v1/img/recipes/27/20/8/picVfzLZo.jpg"
+  },
+  {
+    "text": "Roasted Asparagus",
+    "ingredients": [
+      {
+        "quantity": "1 lb",
+        "name": " asparagus"
+      },
+      {
+        "quantity": "1 1/2 tbsp",
+        "name": "olive oil"
+      },
+      {
+        "quantity": "1/2 tsp",
+        "name": "kosher salt"
+      }
+    ],
+    "image": "http://img.sndimg.com/food/image/upload/w_266/v1/img/recipes/50/84/7/picMcSyVd.jpg"
+  },
+  {
+    "text": "Curried Lentils and Rice",
+    "ingredients": [
+      {
+        "quantity": "1 quart",
+        "name": "beef broth"
+      },
+      {
+        "quantity": "1 cup",
+        "name": "dried green lentils"
+      },
+      {
+        "quantity": "1/2 cup",
+        "name": "basmati rice"
+      },
+      {
+        "quantity": "1 tsp",
+        "name": "curry powder"
+      },
+      {
+        "quantity": "1 tsp",
+        "name": "salt"
+      }
+    ],
+    "image": "http://dagzhsfg97k4.cloudfront.net/wp-content/uploads/2012/05/lentils3.jpg"
+  },
+  {
+    "text": "Big Night Pizza",
+    "ingredients": [
+      {
+        "quantity": "5 teaspoons",
+        "name": "yeast"
+      },
+      {
+        "quantity": "5 cups",
+        "name": "flour"
+      },
+      {
+        "quantity": "4 tablespoons",
+        "name": "vegetable oil"
+      },
+      {
+        "quantity": "2 tablespoons",
+        "name": "sugar"
+      },
+      {
+        "quantity": "2 teaspoons",
+        "name": "salt"
+      },
+      {
+        "quantity": "2 cups",
+        "name": "hot water"
+      },
+      {
+        "quantity": "1/4 cup",
+        "name": "pizza sauce"
+      },
+      {
+        "quantity": "3/4 cup",
+        "name": "mozzarella cheese"
+      }
+    ],
+    "image": "http://upload.wikimedia.org/wikipedia/commons/c/c7/Spinach_pizza.jpg"
+  },
+  {
+    "id": "70fcc46b-42a6-4089-86dd-23ec41eacec4",
+    "text": "Pizza",
+    "ingredients": [
+      {
+        "quantity": "",
+        "name": "veggies, etc"
+      }
+    ],
+    "image": "http://img.sndimg.com/food/image/upload/w_266/v1/img/recipes/27/20/8/picVfzLZo.jpg"
   }
+]

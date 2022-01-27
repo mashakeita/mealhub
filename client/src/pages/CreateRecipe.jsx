@@ -9,27 +9,39 @@ const API_URL = process.env.REACT_APP_API_URL;
 class CreateRecipe extends Component {
   state = {
     recipeData: [],
+    recipeList: [],
   };
+
+  componentDidMount() {
+    axios
+      .get(`${API_URL}/recipies`)
+      .then((response) => {
+        const recipeResults = response.data;
+        this.setState({
+          recipeList: recipeResults,
+        });
+      })
+
+      .catch((error) => console.log(`Get request for videoList: ${error}`));
+  }
 
   handleSubmitRecipe = (e) => {
     e.preventDefault();
     axios
-      .post(`${API_URL}/recipies`, {
-        text: e.target.text.value,
-        ingredients: e.target.ingredients.value,
+      .post(`${API_URL}/recipies/create-recipe`, {
+        text: e.target.titleVideo.value,
+        ingredients: e.target.descriptionVideo.value,
       })
       .then((response) => {
-        alert("Recipe is uploaded");
-        e.target.reset();
+        const recipeResults = response.data;
         this.setState({
-          recipeData: response.data,
+          recipeList: recipeResults,
         });
-        this.props.history.push("/");
+        e.target.reset();
       })
+
       .catch((error) => console.log(`${error}`));
   };
-
-  clickHandler = (e) => {};
 
   resetHandler = (e) => {
     e.preventDefault();
@@ -44,7 +56,7 @@ class CreateRecipe extends Component {
           <form
             className="upload-video__form"
             id="upload-new-video-form"
-            onSubmit={this.handleSubmitVideo}
+            onSubmit={this.handleSubmitRecipe}
             method="post"
           >
             <div className="upload-video__form-container">
@@ -91,7 +103,7 @@ class CreateRecipe extends Component {
               </fieldset>
             </div>
             <div className="upload-video__button-container">
-              <SubmitButton title="SUBMIT" clickHandler={this.clickHandler} />
+              <SubmitButton title="SUBMIT" />
               <button
                 className="upload-video__button-reset"
                 value="reset"
@@ -103,7 +115,7 @@ class CreateRecipe extends Component {
           </form>
 
           <div className="app__video-list">
-            <RecipeList />
+            <RecipeList recipeList={this.state.recipeList} />
           </div>
         </section>
       </div>

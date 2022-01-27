@@ -1,5 +1,6 @@
 import { Router } from "express";
 import fs from "fs";
+import { v4 as uuid } from "uuid";
 
 const recipeRouter = Router();
 
@@ -20,9 +21,8 @@ recipeRouter.get("/", (_req, res) => {
   let recipeData = readFile();
   recipeData = recipeData.map((recipe) => {
     return {
-      id: recipe.id,
-      title: recipe.title,
-      channel: recipe.channel,
+      text: recipe.text,
+      ingredients: recipe.ingredients,
       image: recipe.image,
     };
   });
@@ -30,27 +30,30 @@ recipeRouter.get("/", (_req, res) => {
 });
 
 // post request for create recipe form
-recipeRouter.post("/", (req, res) => {
+recipeRouter.post("/create-recipe", (req, res) => {
+  console.log("req.body", req.body);
   const { text, ingredients } = req.body;
   if (!text || !ingredients) {
     return res
       .status(400)
-      .send("Please make sure to include name and ingredients of the recipe");
+      .send(
+        "Please make sure to include the title and ingredients of the recipe"
+      );
   }
 
   const uploadRecipe = {
-    id: id,
+    id: uuid(),
     text: text,
-    ingredients: ingredients,
-    instructions: description,
-    image: "",
+    ingredients: [{ quantity: "", name: ingredients }],
+    image:
+      "http://img.sndimg.com/food/image/upload/w_266/v1/img/recipes/27/20/8/picVfzLZo.jpg",
   };
 
   const recipeData = readFile();
   recipeData.push(uploadRecipe);
   writeFile(recipeData);
 
-  return res.status(201).json(uploadRecipe);
+  return res.status(201).json(recipeData);
 });
 
 export default recipeRouter;
