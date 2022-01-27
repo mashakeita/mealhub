@@ -16,7 +16,6 @@ function App() {
         <Route path="/recipies" element={<Recipies />} />
         <Route exact path="/recipes/:recipe_id" element={<Recipies />} />
         <Route path="/create-recipe" element={<CreateRecipe />} />
-        {/* <Route path="/posts" element={<PostRecipies />} /> */}
       </Routes>
       <Footer />
     </BrowserRouter>

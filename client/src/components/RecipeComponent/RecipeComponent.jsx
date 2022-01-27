@@ -14,11 +14,9 @@ const RecipeComponent = ({ text, ingredients, image }) => {
               <img src={image} alt={text} />
               <div className="content">
                 <a className="view-recipe" href="#">
-                  View Recipe
+                  Ingredients
                 </a>
-                <ul className="categories">
-                  <li>Ingredients</li>
-                </ul>
+                <ul className="categories">{/* <li>Ingredients</li> */}</ul>
                 {ingredients &&
                   ingredients.map((ingredient) => {
                     return <p key={uniqid()}>{ingredient.name}</p>;
