@@ -3,6 +3,7 @@ import {
   faBars,
   faTimes,
   faPizzaSlice,
+  faUtensils,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
@@ -35,7 +36,7 @@ const Header = () => {
         <div className="header__container">
           <Link to="/" className="header__title" onClick={closeMenu}>
             MealHub
-            <FontAwesomeIcon icon={faPizzaSlice} className="header__logo" />
+            <FontAwesomeIcon icon={faUtensils} className="header__logo" />
           </Link>
           <div className="menu-icon" onClick={handleClick}>
             <FontAwesomeIcon

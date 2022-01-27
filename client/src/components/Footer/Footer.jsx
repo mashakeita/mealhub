@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { faPizzaSlice } from "@fortawesome/free-solid-svg-icons";
+import { faUtensils } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./Footer.scss";
 
@@ -39,7 +39,7 @@ function Footer() {
           <div className="footer__logo">
             <Link to="/" className="social__logo">
               MealHub
-              <FontAwesomeIcon icon={faPizzaSlice} className="header__logo" />
+              <FontAwesomeIcon icon={faUtensils} className="header__logo" />
             </Link>
           </div>
           <small className="social__rights">MealHub © 2020</small>

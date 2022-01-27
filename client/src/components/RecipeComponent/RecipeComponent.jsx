@@ -4,24 +4,32 @@ import uniqid from "uniqid";
 
 const RecipeComponent = ({ text, ingredients, image }) => {
   return (
-    <li className="related-recipe__item">
-      <Link to={`/create-recipe/}`} className="related-recipe__link">
-        <div className="related-recipe__box-image">
-          <img className="related-recipe__image" src={image} alt={text} />
-        </div>
-        <div className="related-recipe__content">
-          <h3 className="related-recipe__title-item">{text}</h3>
-          {ingredients &&
-            ingredients.map((ingredient) => {
-              return (
-                <p key={uniqid()} className="related-recipe__channel">
-                  {ingredient.name}
-                </p>
-              );
-            })}
-        </div>
-      </Link>
-    </li>
+    <main>
+      <ul className="card-list">
+        {/* <Link to={`/create-recipe/}`} className="recipe-card__link"> */}
+        <li>
+          <article>
+            <h1>{text}</h1>
+            <section>
+              <img src={image} alt={text} />
+              <div className="content">
+                <a className="view-recipe" href="#">
+                  View Recipe
+                </a>
+                <ul className="categories">
+                  <li>Ingredients</li>
+                </ul>
+                {ingredients &&
+                  ingredients.map((ingredient) => {
+                    return <p key={uniqid()}>{ingredient.name}</p>;
+                  })}
+              </div>
+            </section>
+          </article>
+        </li>
+        {/* </Link> */}
+      </ul>
+    </main>
   );
 };
 export default RecipeComponent;

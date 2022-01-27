@@ -46,7 +46,7 @@ recipeRouter.post("/create-recipe", (req, res) => {
     text: text,
     ingredients: [{ quantity: "", name: ingredients }],
     image:
-      "http://img.sndimg.com/food/image/upload/w_266/v1/img/recipes/27/20/8/picVfzLZo.jpg",
+      "https://honestcooking.com/wp-content/uploads/2013/12/Screen-Shot-2013-12-10-at-12.41.37-PM.png",
   };
 
   const recipeData = readFile();
